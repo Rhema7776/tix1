@@ -1,43 +1,48 @@
-import React from 'react'
+import React, {useState} from 'react'
 import logo from '../images/RheMartlogo.png' 
 import logo1 from '../images/Vector.png'
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import IonIcon from '@reacticons/ionicons';
+
 const Navbar = () => {
+    const [nav, setNav] = useState(false)
+    const handleClick = () => setNav(!nav)
+
   return (
-    <div className=''>
-       <div className='container mx-auto'>
-            <div className='sm:flex justify-around'>
-                {/* Site logo */}
-                <div className=' flex'>
-                    <img src={logo1} alt="vector" className='mr-2' />
-                    <img src={logo} alt="RheMartlogo" className=""/>
+    <div className='w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg'>
+        <div className='px-2 flex justify-between items-center w-full h-full'>
+            <div className='flex items-center'>
+                <div className='flex'>
+                    <img src={logo1} alt="" />
+                    <img src={logo} alt="" />
                 </div>
-                
-                
-
-                {/* Menu Items */}
-                <ul className='text-black-400 sm:self-center text-xl border-t sm:border-none '>
-                    <li className='sm:inline-block'>
-                        <a href='#' className='p-3 font-sans '>Solutions</a>
-                    </li>
-                    <li className='sm:inline-block'>
-                        <a href='#' className='p-3'>Industries</a>
-                    </li>
-                    <li className='sm:inline-block'>
-                        <a href='#' className='p-3'>Fees</a>
-                    </li>
-                    <li className='sm:inline-block'>
-                        <a href='#' className='p-3' >About Rareblocks</a>
-                    </li>
+                <ul className='hidden md:flex'>
+                    <li>Solutions</li>
+                    <li>Industries</li>
+                    <li>Fees</li>
+                    <li>About Rareblocks</li>
                 </ul>
-
-                {/* Auth Items */}
-                {/* <div  className='sm:inline-block text-xl'>
-                    <a href='#' className='p-3 '>Sign In</a>
-                    <a href='#' className='bg-blue-500 md btn p-2 text-white hover:text-xl rounded-xl'>Create free account</a>
-                </div> */}
-
+            </div>
+            <div className='hidden md:flex pr-4'> 
+                <button className='border-none bg-transparent text-black mr-4'>Sign In</button>
+                <button className='px-8 py-3'>Get free account</button>
+            </div>
+            <div className='md:hidden' onClick={handleClick}>
+                {!nav ? <MenuIcon className='w-5' /> : <XIcon className='w-5' />}
+                
             </div>
         </div>
+        <ul className={!nav ? 'hidden' : 'absolute bg-zinc-200 w-full px-8'}>
+            <li className='border-b-2 border-zinc-300 w-full'>Solutions</li>
+            <li className='border-b-2 border-zinc-300 w-full'>Industries</li>
+            <li className='border-b-2 border-zinc-300 w-full'>Fees</li>                
+            <li className='border-b-2 border-zinc-300 w-full'>About Rareblocks</li>
+
+            <div className='flex flex-col my-4'> 
+                <button className=' bg-transparent  px-8 py-3 mb-4'>Sign In</button>
+                <button className='px-8 py-3'>Get free account</button>
+            </div>
+        </ul>
     </div>
   )
 }
