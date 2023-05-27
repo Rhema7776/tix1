@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import logo from '../images/RheMartlogo.png' 
-import logo1 from '../images/Vector.png'
+import logo from '../assets/RheMartlogo.png' 
+import logo1 from '../assets/Vector.png'
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import IonIcon from '@reacticons/ionicons';
 
@@ -9,14 +9,14 @@ const Navbar = () => {
     const handleClick = () => setNav(!nav)
 
   return (
-    <div className='w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg'>
+    <div className='w-screen h-[80px] z-10  fixed drop-shadow-lg'>
         <div className='px-2 flex justify-between items-center w-full h-full'>
             <div className='flex items-center'>
                 <div className='flex'>
                     <img src={logo1} alt="" />
                     <img src={logo} alt="" />
                 </div>
-                <ul className='hidden md:flex'>
+                <ul className='hidden md:flex font-semibold'>
                     <li>Solutions</li>
                     <li>Industries</li>
                     <li>Fees</li>
@@ -32,7 +32,7 @@ const Navbar = () => {
                 
             </div>
         </div>
-        <ul className={!nav ? 'hidden' : 'absolute bg-zinc-200 w-full px-8'}>
+        <ul className={!nav ? 'hidden' : 'absolute w-full px-8'}>
             <li className='border-b-2 border-zinc-300 w-full'>Solutions</li>
             <li className='border-b-2 border-zinc-300 w-full'>Industries</li>
             <li className='border-b-2 border-zinc-300 w-full'>Fees</li>                
