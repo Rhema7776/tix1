@@ -6,7 +6,6 @@ module.exports = {
     screens: {
       xs: '320px',
       // => @media (min-width: 320px) {...}
-
       sm: '640px',
       // => @media (min-width: 640px) {...}
       md: '768px',
@@ -19,8 +18,10 @@ module.exports = {
       // => @media (min-width: 1536px) {...}
       '3xl': '1775px',
       // => @media (min-width: 1775px) {...}
+      '3mxl': '1956px',
+      // => @media (min-width: 1956px) {...}
       '4xl': '2200px',
-      // => @media (min-width: 1775px) {...}
+      // => @media (min-width: 2200px) {...}
 
     }
   },
