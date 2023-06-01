@@ -35,17 +35,17 @@ const Hero = () => {
           <h1 className=" md:text-start md:text-[51px] xl:text-[78px] lg:text-[65px]  3xl:text-[100px] 3mxl:text-[116px] 4xl:text-[136px]  font-bold  lg:text-start text-center  sm:text-3xl text-5xl md:text-4xl lg:text-5xl xl:text-8xl 2xl:text-8xl">
             A special credit card made for Developers
           </h1>
-          <p className="py-3 text-sm lg:text-md xl:text-lg 3xl:text-start 3xl:text-3xl 4xl:text-start 4xl:text-4xl  text-slate-500 ">
+          <p className="py-3 xs:text-start text-sm lg:text-md xl:text-lg 3xl:text-start 3xl:text-3xl 4xl:text-start 4xl:text-4xl  text-slate-500 ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             <br /> Non dfvfgb fbgfg bfgb ergsrdfv sdfsdfsd
           </p>
-          <div className="xs:w-[100%] sm:ml-[15%] md:ml-[0%] lg:ml-[0%] xl:ml-[0%] 2xl:ml-[0%] 3xl:ml-[0%] 4xl:ml-[0%] sm:w-[70%] md:py-2 md:h-[16%] xl:p3 xl:w-[90%]   lg:h-[13%] lg:text-xl 3xl:h-[20%] 3mxl:h-[20%]  4xl:h-[15%] border-slate-600 md:w-[100%] rounded-xl bg-white flex items-center px-2 py-3 w-[200px]  lg:w-[500px]">
+          <div className=" border border-slate-300 xs:w-[100%] sm:ml-[15%] md:ml-[0%] lg:ml-[0%] xl:ml-[0%] 2xl:ml-[0%] 3xl:ml-[0%] 4xl:ml-[0%] sm:w-[70%] md:py-[6%] lg:py-[1%] xl:py-[1%] 2xl:py-[1%] 3xl:py-[0%]  4xl:py-[1%] md:h-[16%] xl:p3 xl:w-[90%]   lg:h-[13%] lg:text-xl 3xl:h-[20%] 3mxl:h-[20%]  4xl:h-[15%]  md:w-[100%] rounded-xl bg-white flex items-center px-2 py-3 w-[200px]  lg:w-[500px]">
             <input
               type="text"
-              className="bg-transparent p-2 w-full focus:outline-none 3xl:text-4xl 4xl:text-4xl "
+              className="bg-transparent  p-2 w-full focus:outline-none lg:text-sm  3xl:text-4xl 4xl:text-4xl "
               placeholder="Enter email address "
             />
-            <button className="py-3  px-6 sm:w-[60%]  lg:text-sm  3xl:h-[90%] 3xl:text-4xl 4xl:text-4xl 4xl:h-[90%]">
+            <button className="py-3  px-6 sm:w-[60%]  lg:text-sm   3xl:text-4xl 4xl:text-4xl ">
               Get Started
             </button>
           </div>
@@ -94,6 +94,7 @@ const Hero = () => {
           />
         </div>
       </div>
+      
     </div>
   );
 };
