@@ -3,13 +3,14 @@ import logo from '../assets/RheMartlogo.png'
 import logo1 from '../assets/Vector.png'
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import IonIcon from '@reacticons/ionicons';
+import Group13 from '../assets/Group 13.png'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
 
   return (
-    <div className='w-screen h-[80px] z-10  fixed drop-shadow-lg'>
+    <div className='w-screen h-[80px] z-10 bg-transparent  fixed drop-shadow-lg'>
         <div className='px-2 flex justify-between items-center w-full h-full'>
             <div className='flex items-center'>
                 <div className='flex'>
@@ -32,15 +33,18 @@ const Navbar = () => {
                 
             </div>
         </div>
-        <ul className={!nav ? 'hidden' : 'absolute w-full px-8'}>
-            <li className='border-b-2 border-zinc-300 w-full'>Solutions</li>
+        <ul className={!nav ? 'hidden' : 'absolute w-full px-8 bg-white'}>
+            <li className='border-b-2  border-zinc-300 w-full'>Solutions</li>
             <li className='border-b-2 border-zinc-300 w-full'>Industries</li>
             <li className='border-b-2 border-zinc-300 w-full'>Fees</li>                
             <li className='border-b-2 border-zinc-300 w-full'>About Rareblocks</li>
 
+            {/* <img className=" absolute w-[730px] h-[700px] ml-32 mb-30 " src={Group13} alt="" /> */}
+            
             <div className='flex flex-col my-4'> 
-                <button className=' bg-transparent  px-8 py-3 mb-4'>Sign In</button>
+                <button className=' bg-transparent text-black  px-8 py-3 mb-4'>Sign In</button>
                 <button className='px-8 py-3'>Get free account</button>
+
             </div>
         </ul>
     </div>
