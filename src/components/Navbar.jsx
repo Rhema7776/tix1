@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import logo from '../assets/RheMartlogo.png' 
 import logo1 from '../assets/Vector.png'
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import {NavLink} from 'react-router-dom';
+import './Hero.css'
 import IonIcon from '@reacticons/ionicons';
 import Group13 from '../assets/Group 13.png'
 
@@ -10,14 +12,14 @@ const Navbar = () => {
     const handleClick = () => setNav(!nav)
 
   return (
-    <div className='w-screen h-[80px] z-10 bg-transparent  fixed drop-shadow-lg'>
+    <div className='w-screen h-[80px] z-10 bg-transparent text-16px xs:fixed drop-shadow-lg'>
         <div className='px-2 flex justify-between items-center w-full h-full'>
             <div className='flex items-center'>
                 <div className='flex'>
                     <img src={logo1} alt="" />
                     <img src={logo} alt="" />
                 </div>
-                <ul className='hidden md:flex font-semibold'>
+                <ul className='hidden  md:flex font-semibold'>
                     <li>Solutions</li>
                     <li>Industries</li>
                     <li>Fees</li>
@@ -25,8 +27,13 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className='hidden md:flex pr-4'> 
-                <button className='border-none bg-transparent text-black mr-4'>Sign In</button>
-                <button className='px-8 py-3'>Get free account</button>
+                <NavLink to='/components/LogIn'>
+                    <button className='border-none bg-transparent text-black mr-4'>Sign In</button>
+                </NavLink>
+                <NavLink to='/SignUp'>
+                    <button className='px-8 py-3'>Get free account</button>
+                </NavLink>
+                
             </div>
             <div className='md:hidden' onClick={handleClick}>
                 {!nav ? <MenuIcon className='w-5' /> : <XIcon className='w-5' />}
