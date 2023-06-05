@@ -12,6 +12,8 @@ import Search from './pages/Search';
 import Cart from './pages/Cart';
 import { StateContext } from './lib/ContextApi';
 import { Toaster } from 'react-hot-toast';
+import SignUp from './pages/SignUp';
+import LogIn from './pages/LogIn';
 
 function App() {
   return (
@@ -19,8 +21,8 @@ function App() {
       
       <StateContext>
       <Toaster/>
-      <Navbar />
       <Routes>
+        
         <Route path ='/' element={<Home />} />
         <Route path ='categories' element={<Category />} >
           <Route path =':categoryid' element={<CategoryId />} />
@@ -30,11 +32,13 @@ function App() {
         </Route>
         <Route path='search' element={<Search/>}/>
         <Route path='cart' element={<Cart />}/>
+        <Route path='sign up' element={<SignUp />}/>
+        <Route path='log in' element={<LogIn />}/>
       </Routes>
-      <Footer/>
+      
       </StateContext>
       
-      <Hero />
+      
     </>
   );
 }

@@ -17,8 +17,8 @@ const Navbar = () => {
     // console.log(scrollPosition);
     // top-10 bg-white
   return (
-    <div className=' h-[80px] z-10   text-16px drop-shadow-lg bg-transparent  '>
-        <div className='px-2  flex justify-between items-center w-[100%] h-full'>
+    <div className='w-screen h-[80px] z-10 bg-transparent  text-16px drop-shadow-lg fixed  '>
+        <div className='px-2 flex justify-between items-center w-full h-full'>
             <div className='flex items-center'>
                 <div className='flex'>
                     <img src={logo1} alt="" />
@@ -31,7 +31,7 @@ const Navbar = () => {
                     <li>About Rareblocks</li>
                 </ul>
             </div>
-            <div className='hidden md:flex pr-4 '> 
+            <div className='hidden md:flex pr-4 bg-grey-500'> 
                 <NavLink to='/log in' className=''>
                     <button className='border-none bg-transparent text-black mr-4 py-3'>Sign In</button>
                 </NavLink>

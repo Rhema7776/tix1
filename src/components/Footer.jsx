@@ -23,6 +23,14 @@ export default function Footer() {
             href: 'pinterest.com',
             id: 4,
         },
+        {
+            name: 'pinterest',
+            href: 'pinterest.com',
+            id: 5,
+        },
+       
+     
+
 
     ]
 
@@ -33,7 +41,7 @@ export default function Footer() {
         {name: 'store', id: 4},
     ]
   return (
-    <div className='py-5 px-2 d-flex align-items-center justify-content-center'>
+    <div className='py-[10%] xs:mt-[90%] sm:mt-40 md:mt-0 md:py-10    px-2 d-flex align-items-center justify-content-center'>
         <div className='d-flex flex-column gap-5 justify-content-center text-center'>
             <h1>JOIN OUR NEWSLETTER</h1>
             <div className='d-md-flex gap-4 justify-content-center align-items-center'>
@@ -45,7 +53,7 @@ export default function Footer() {
                     </a>
                 ))}
             </div>
-            <div className='d-md-flex gap-4 justify-content-center align-items-center gap-4'>
+            <div className='d-md-flex gap-4 justify-content-center align-items-center '>
                 {infos.map((it) => (
                     
                     <p className='text-uppercase font-normal text-xs mx-2' key={it.id}>
