@@ -70,7 +70,7 @@ const properties = {
 
 const Section5a = () => {
   return (
-    <div className="bg-imgtest 2xl:mb-10  w-full md2:h-[400px]  h-[550px] lg:h-[1000px] 2xl:h-[1300px]">
+    <div className="bg-imgtest 2xl:mb-10  w-full md2:h-[400px]  h-[550px] lg:h-[1000px] 2xl:h-[1300px] ">
        
       <Slide {...properties}>
         {slides.map((slide, index) => (
