@@ -1,6 +1,6 @@
 import React from 'react'
 import {Carousel, IconButton} from "@material-tailwind/react";
-// import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline"
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/outline"
 import {Link} from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
 import Spinner from '../utils/Spinner'
@@ -19,11 +19,35 @@ export default function HomeCategory() {
         {error || (categories && 
             <>
                 {error && <p>{error.message}</p>}
-                <Carousel>
+                <Carousel
+                 className="rounded-xl"
+                 prevArrow={({ handlePrev }) => (
+                    <IconButton
+                        variant="text"
+                        color="white"
+                        size="lg"
+                        onClick={handlePrev}
+                        className="!absolute top-2/4 -translate-y-2/4 left-4"
+                        >
+                        <ArrowLeftIcon strokeWidth={2} className="w-6 h-6" />
+                        </IconButton>
+                    )}
+                    nextArrow={({ handleNext }) => (
+                        <IconButton
+                        variant="text"
+                        color="white"
+                        size="lg"
+                        onClick={handleNext}
+                        className="!absolute top-2/4 -translate-y-2/4 !right-4"
+                        >
+                        <ArrowRightIcon strokeWidth={2} className="w-6 h-6" />
+                        </IconButton>
+                    )}
+                >
                     {bannerCategory.map((banner) => (
                     <Carousel.Item key={banner.id}>
                         <img
-                        className="d-block w-100"
+                        className="block h-full w-full object-cover"
                         src={banner.image}
                         alt={banner.name}
                         style={{ height: "600px" }}

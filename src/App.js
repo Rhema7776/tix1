@@ -1,42 +1,44 @@
 import './App.css'
 import {Routes, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
 import Home from './pages/Home'
 import Footer from './components/Footer';
-import Category from './pages/Category';
-import CategoryId from './pages/CategoryId';
-import Products from './pages/Products';
-import ProductId from './pages/ProductId';
-import Search from './pages/Search';
-import Cart from './pages/Cart';
-import { StateContext } from './lib/ContextApi';
-import { Toaster } from 'react-hot-toast';
-import SignUp from './pages/SignUp';
-import LogIn from './pages/LogIn';
+import Home2 from './pages/Home2';
+import './VerticalSlideCarousel.css';
+import {
+  Animator,
+  ScrollContainer,
+  ScrollPage,
+  batch,
+  Fade,
+  FadeIn,
+  FadeOut,
+  Move,
+  MoveIn,
+  MoveOut,
+  Sticky,
+  StickyIn,
+  StickyOut,
+  Zoom,
+  ZoomIn,
+  ZoomOut,
+} from "react-scroll-motion";
 
 function App() {
   return (
     <>
       
-      <StateContext>
-      <Toaster/>
+      <Navbar />
       <Routes>
         
         <Route path ='/' element={<Home />} />
-        <Route path ='categories' element={<Category />} >
-          <Route path =':categoryid' element={<CategoryId />} />
-        </Route>
-        <Route path ='products' element={<Products />} >
-          <Route path =':productid' element={<ProductId />} />
-        </Route>
-        <Route path='search' element={<Search/>}/>
-        <Route path='cart' element={<Cart />}/>
-        <Route path='sign up' element={<SignUp />}/>
-        <Route path='log in' element={<LogIn />}/>
+        <Route path ='/Home2' element={<Home2 />} />
+       
       </Routes>
+      <Footer/>
       
-      </StateContext>
+
+      
       
       
     </>

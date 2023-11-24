@@ -1,24 +1,28 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import HeroProduct from '../components/Hero'
-import HomeCategory from '../components/HomeCategory'
-import useFetch from '../hooks/useFetch'
-import FeatureProducts from '../components/FeatureProducts'
-import Footer from '../components/Footer'
-
-
+import Hero from '../components/Hero'
+import Section3a from '../components/Section3a';
+import Section4a from '../components/Section4a';
+import Section7a from '../components/Section7a';
+import Section8a from '../components/Section8a';
+import Section5a from '../components/Section5a';
+import Selectscroll from '../components/Selectscroll';
+// import ScrollAnimation from '../components/ScrollAnimation';
 
 export default function Home() {
-    const { error, loading, data} = useFetch(
-        'https://ecommtest.onrender.com/products'
-    )
+   
   return (
     <>
-        <Navbar />
-        <HeroProduct error={error} data={data} loading={loading} />
-        {/* <HomeCategory/> */}
-        {/* <FeatureProducts error={error} data={data} loading={loading}/> */}
-        <Footer />
+      <Hero /> 
+      <Section3a />
+      <Section4a />
+      {/* <ScrollAnimation /> */}
+      <Section5a />
+      <Selectscroll />      
+      <Section7a />
+      <Section8a />
+
+
+      
     </>
   )
 }

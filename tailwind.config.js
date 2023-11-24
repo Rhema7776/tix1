@@ -6,10 +6,20 @@ module.exports = {
     screens: {
       xs: '320px',
       // => @media (min-width: 320px) {...}
+      xsa: '436px',
+      // => @media (min-width: 436px) {...}
+      xs1: '624px',
+      // => @media (min-width: 624px) {...}
       sm: '640px',
       // => @media (min-width: 640px) {...}
       md: '768px',
       // => @media (min-width: 768px) {...}
+      md1: '812px',
+      // => @media (min-width: 812px) {...}
+      md2: '960px',
+      // => @media (min-width: 960px) {...}
+      md3: '970px',
+      // => @media (min-width: 960px) {...}
       lg: '1024px',
       // => @media (min-width: 1024px) {...}
       xl: '1280px',

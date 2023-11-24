@@ -2,7 +2,7 @@ import React from 'react'
 import Masonry, {ResponsiveMasonry} from 'react-responsive-masonry'
 import useFetch from '../hooks/useFetch'
 import Spinner from '../utils/Spinner'
-import ProductContainer from '../components/ProductContainer'
+import ProductContainer from '../components/Footerlocker'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 
 export default function Products() {
