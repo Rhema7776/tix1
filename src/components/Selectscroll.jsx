@@ -34,7 +34,7 @@ const Selectscroll = () => {
     
     return (
         
-      <div  className="app container  mx-auto justify-center flex flex-row font-extrabold orangetext text-xl sm:text-2xl md2:text-6xl md2:mt-[30%] mt-20 xs:max-xs1:mt-12 ">
+      <div  className="app container  mx-auto justify-center flex flex-row font-extrabold orangetext text-xl sm:text-2xl md2:text-6xl md2:mt-[30%] lg:mt-[4%] mt-20 xs:max-xs1:mt-12 ">
         
         <div className='flex justify-end w-[90%] items-center '>
         
