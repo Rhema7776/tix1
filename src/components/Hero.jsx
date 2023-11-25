@@ -1,6 +1,7 @@
 import React from "react";
 // import "./Hero.css";
 import { Link } from "react-router-dom";
+import stickyicon from "../assets/stickyroboticon.jpg"
 
 const Hero = () => {
   return (
@@ -24,6 +25,7 @@ const Hero = () => {
               className="ml-1"
             />
           </Link>
+          
         </div>
         <div className="px-[7%]">
           <h1 className="text-4xl lg:text-8xl mt-5 orangetext font-extrabold">
@@ -49,7 +51,12 @@ const Hero = () => {
           
         </div>
         
+        
       </div>
+      {/* <img src={stickyicon} alt="" className="sticky bottom-1 left-[96%]" /> */}
+      <span className=" bottom-1 left-[80%] md:left-[90%] lg:left-[94%] orangebutton rounded-full p-3 fixed z-10 ">
+        <span href="" className="stickyrobot "></span>
+      </span>
       <img
           
           src="https://res.cloudinary.com/tix-africa/image/upload/q_auto:low/v1671015152/website/homepage.png"
