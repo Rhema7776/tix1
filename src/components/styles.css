@@ -26,7 +26,19 @@
     overflow: hidden;
   }
   
-  .fading-container:before,
+  .fading-container:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 44%; /* Adjust the height of the fade as needed */
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    );
+    pointer-events: none;
+  }
   .fading-container:after {
     content: '';
     position: absolute;
