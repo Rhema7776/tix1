@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import ReactDOM from 'react-dom';
 import { useScroll, useWindowScroll } from 'react-use';
 import { motion } from "framer-motion"
@@ -8,17 +8,33 @@ import './styles.css';
 
 
 const Selectscroll = () => {
+    const bodyRef = useRef(null);
     const selectRef = React.useRef(null);
 
+    const [bodyScrollTop, setBodyScrollTop] = useState(0);
+    const [selectOptions, setSelectOptions] = useState(Array.from({ length: 20 }, (_, i) => i + 1));
     // const scrollRef = React.useRef(null);
     // const { y } = useScroll(scrollRef);
 
     useEffect(() => {
+        const handleBodyScroll = () => {
+            if (bodyRef.current && selectRef.current) {
+                const bodyScrollTop = bodyRef.current.scrollTop;
+                const selectHeight = selectRef.current.clientHeight;
+        
+                // Adjust the select options based on the body scroll position
+                const selectedIndex = Math.floor(bodyScrollTop / selectHeight);
+                setBodyScrollTop(bodyScrollTop);
+                // selectRef.current.scrollTop = windowScrollTop;
+                selectRef.current.scrollTop = bodyScrollTop;
+            }
+        };
+      
         const handleScroll = () => {
           // To Adjust the scrollTop of the select dropdown based on the window scroll position
           if (selectRef.current) {
             const windowScrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-            selectRef.current.scrollTop = windowScrollTop;
+            
           }
         };
     
@@ -28,13 +44,19 @@ const Selectscroll = () => {
         // To Cleanup the event listener on component unmount
         return () => {
           window.removeEventListener('scroll', handleScroll);
+          document.body.removeEventListener('scroll', handleBodyScroll);
         };
+
+
+        // To Attach the scroll event listener to the body
+        document.body.addEventListener('scroll', handleBodyScroll);
+
       }, []);
 
     
     return (
-        
-      <div  className="app container  mx-auto justify-center flex flex-row font-extrabold orangetext text-xl sm:text-2xl md2:text-6xl md2:mt-[30%] lg:mt-[4%] mt-20 xs:max-xs1:mt-12 ">
+    <div ref={bodyRef} className='app container  mx-auto ' >
+        <div   className="justify-center flex flex-row font-extrabold orangetext text-xl sm:text-2xl md2:text-6xl md2:mt-[30%] lg:mt-[4%] mt-20 xs:max-xs1:mt-12 ">
         
         <div className='flex justify-end w-[90%] items-center '>
         
@@ -42,7 +64,7 @@ const Selectscroll = () => {
                 Create your
             </h1>
         </div>
-        <div className='fading-container h-full blurred-container fading-container w-full'>
+        <div className=' h-full blurred-container fading-container w-full'>
         {/* ref={scrollRef} */}
         <div className="scroll-container   xs:max-md:h-[300px] no-scroll md:h-[400px] lg:h-[800px]  align-start"  ref={selectRef} >
             
@@ -161,6 +183,8 @@ const Selectscroll = () => {
         </div>
        
       </div>
+    </div>
+      
     );
 }
 

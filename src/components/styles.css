@@ -1,4 +1,13 @@
-.scroll-container {
+@media screen and (min-width: 960px){
+  .scroll-container {    
+    scroll-behavior: smooth;
+    transition: 0.3s;
+  }
+  /* .content-box{
+    scroll-behavior: smooth;
+  } */
+}
+  .scroll-container {
     /* dispay: block; */
     width: 100%;
     
