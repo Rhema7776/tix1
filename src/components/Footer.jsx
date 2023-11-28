@@ -12,7 +12,7 @@ const Footer = () => {
   const handleClicksocial = () => setSocialmenu(!socialmenu);
 
   return (
-    <footer class="bg-[rgba(252,100,53,.1)] dark:bg-gray-900 py-16 px-0 xs:max-lg:px-3 lg:px-9">
+    <footer class="bg-[rgba(252,100,53,.1)] py-16 px-0 xs:max-lg:px-3 lg:px-9">
       <div class="container mx-auto w-full ">
         <div className="md:flex md:flex-row flex-col gap-[27%] lg:justify-evenly  ">
           <div className=" xs:max-lg:mb-5 block">

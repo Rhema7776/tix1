@@ -70,7 +70,7 @@ const properties = {
 
 const Section5a = () => {
   return (
-    <div className="bg-imgtest 2xl:mb-10  w-full md2:h-[400px]  h-[550px] lg:h-[1000px] 2xl:h-[1300px] ">
+    <div className="bg-imgtest bg-red-400 2xl:mb-10  w-full md2:h-[400px] xs:max-md:h-[400px]  h-[550px] lg:h-[1000px] 2xl:h-[1300px] ">
        
       <Slide {...properties}>
         {slides.map((slide, index) => (
@@ -81,17 +81,17 @@ const Section5a = () => {
             >
               <span
                 style={spanStyle}
-                className=" w-[90%] lg:w-[60%]   text-gray-600 lg:text-5xl 2xl:text-6xl h-[58%] 2xl:h-[600px]  mt-[16%] "
+                className=" w-[90%] lg:w-[60%] bg-purple-400   text-gray-600 lg:text-5xl 2xl:text-6xl h-[58%] 2xl:h-[600px]  mt-[16%] "
               >
                 <h1 className="font-extrabold xs:max-lg:text-4xl 2xl:text-6xl text-gray-900 mb-4 block ">
                   
                   Testimonials
                 
                 </h1>
-                <h1 className=" lg:text-2xl mb-2 mt-[14%] 2xl:mt-[10%] 4xl:mt-[4%] xs:max-xs1:mt-20 block  ">
+                <h1 className=" lg:text-2xl mb-2 mt-[14%] 2xl:mt-[10%] 4xl:mt-[4%] xs:max-md:mt-12 block  ">
                   "{slide.caption}"
                 </h1>
-                <div className="flex mt-[11%] lg:gap-10 md:text-2xl 3xl:mt-[4%] xs:max-xs1:mt-20  ">
+                <div className="flex mt-[11%] lg:gap-10 md:text-2xl 3xl:mt-[4%] xs:max-md:mt-12  ">
                   <p className="  ">{slide.url}</p>
                   <p className=" orangetext  ">{slide.fullname}</p>
                 </div>

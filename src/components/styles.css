@@ -1,46 +1,37 @@
-@media screen and (min-width: 960px){
-  .scroll-container {    
-    scroll-behavior: smooth;
-    
-  }
-  /* .content-box{
-    scroll-behavior: smooth;
-  } */
+
+
+.scroll-container {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: inline-block;
+  vertical-align: top;
+  scroll-behavior: smooth;
 }
-  .scroll-container {
-    /* dispay: block; */
-    width: 100%;
-    
-    overflow-x: hidden;
-    overflow-y: scroll;
-    
-    display: inline-block;
-    vertical-align: top;
-    /* padding: 0%; */
 
-  }
-  
-  .content-box {
-    /* display: block; */
-    /* height: 100px; */
-    margin: 20px;
- 
-  }
-   /* vertical carousel css */
+.content-box {
+  margin: 12px;
+}
 
-  /* Fade styling */
+/* Vertical carousel fading styling */
+
+.fading-container {
+  position: relative;
+  height: 300px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+@media screen and (min-width: 960px){
   .fading-container {
     position: relative;
-    height: 450px; /* Adjust the height as needed */
+    height: 900px; /* Adjust the height as needed */
     overflow: hidden;
   }
-  
-  .fading-container:before{
+  .fading-container:before {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    height: 44%; /* Adjust the height of the fade as needed */
+    height: 40%; /* Adjust the height of the fade as needed */
     background: linear-gradient(
       to top,
       rgba(255, 255, 255, 0),
@@ -48,40 +39,53 @@
     );
     pointer-events: none;
   }
-  .fading-container:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 44%; /* Adjust the height of the fade as needed */
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 1)
-    );
-    pointer-events: none;
-    /* Adjust the blur intensity as needed */
-    /* backdrop-filter: blur(2px);  */
-  }
-  
-  .fading-container:before {
-    top: 0;
-  }
-  
-  .fading-container:after {
-    bottom: 0;
-  }
-  
-  .content {
-    position: relative;
-    z-index: 1;
-    background-color: #fff; /* Set your actual background color */
-    padding: 70px; /* Add padding to separate content from the fade */
-  }
-  
-  /* Fade styling ended */
-    .no-scroll::-webkit-scrollbar {display:none;} 
-    .no-scroll::-moz-scrollbar {display:none;}
-    .no-scroll::-o-scrollbar {display:none;}
-    .no-scroll::-google-ms-scrollbar {display:none;}
-    .no-scroll::-khtml-scrollbar {display:none;}
+}
+.fading-container:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 44%; /* Adjust the height of the fade as needed */
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
+  pointer-events: none;
+}
+
+.fading-container:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 44%; /* Adjust the height of the fade as needed */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
+  pointer-events: none;
+}
+
+.fading-container:before {
+  top: 0;
+}
+
+.fading-container:after {
+  bottom: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  background-color: #fff; /* Set your actual background color */
+  padding: 70px; /* Add padding to separate content from the fade */
+}
+
+/* Additional styles for removing scrollbars */
+.no-scroll::-webkit-scrollbar {display:none;} 
+.no-scroll::-moz-scrollbar {display:none;}
+.no-scroll::-o-scrollbar {display:none;}
+.no-scroll::-google-ms-scrollbar {display:none;}
+.no-scroll::-khtml-scrollbar {display:none;}

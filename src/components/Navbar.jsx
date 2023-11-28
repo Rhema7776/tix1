@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <div className="  text-16px text-gray-800 bg-white   w-full xs:py-3  sticky top-0 z-10">
-      <div className="mx-auto p-7  z-10 font-md bg-white md:flex md:justify-center md:items-center fixed top-0  drop-shadow-xl  w-full">
+      <div className="mx-auto p-5  z-10 font-md bg-white md:flex md:justify-center md:items-center fixed top-0  drop-shadow-xl  w-full">
         <div className="flex justify-between items-center    h-full w-full ">
           <div className=" xs:max-sm:w-20  items-centerw w-28 ">
             <img
