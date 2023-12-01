@@ -5,19 +5,16 @@ import { Slide, Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 const spanStyle = {
-  // padding: "20px",
   color: "gray",
   background: "",
-  // fontSize: "120px"
-  // opacity: "100",
+ 
 };
 
 const divStyle = {
   display: "flex",
-  // alignItems: "end",
+ 
   justifyContent: "center",
-  // backgroundSize: "cover",
-  // height: "500px",
+
 };
 const slides = [
   {
@@ -62,7 +59,6 @@ const properties = {
   ),
   nextArrow: (
     <button style={{ ...buttonStyle }} className=" mt-[50%] md1:mt-[40%] 2xl:mt-[20%] mr-[20%] xs:max-xs1:hidden ">
-      {/* xs:max-xs1:hidden lg:mt-[34%] xs:max-md:mr-[10%] mr-[20%] 3xl:mt-[26%] */}
       <img  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDggMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNyA3TDEgMTMiIHN0cm9rZT0iIzJFMkUyRSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==" alt="Chevron" />
     </button>
   ),
@@ -70,7 +66,7 @@ const properties = {
 
 const Section5a = () => {
   return (
-    <div className="bg-imgtest bg-red-400 2xl:mb-10  w-full md2:h-[400px] xs:max-md:h-[400px]  h-[550px] lg:h-[1000px] 2xl:h-[1300px] ">
+    <div className="bg-imgtest 2xl:mb-10 w-full md2:h-[400px] xs:max-md:h-[400px]  h-[550px] lg:h-[1000px] 2xl:h-[1300px] ">
        
       <Slide {...properties}>
         {slides.map((slide, index) => (
@@ -81,7 +77,7 @@ const Section5a = () => {
             >
               <span
                 style={spanStyle}
-                className=" w-[90%] lg:w-[60%] bg-purple-400   text-gray-600 lg:text-5xl 2xl:text-6xl h-[58%] 2xl:h-[600px]  mt-[16%] "
+                className=" w-[90%] lg:w-[60%]   text-gray-600 lg:text-5xl 2xl:text-6xl h-[58%] 2xl:h-[600px]  mt-[16%] "
               >
                 <h1 className="font-extrabold xs:max-lg:text-4xl 2xl:text-6xl text-gray-900 mb-4 block ">
                   
@@ -105,51 +101,3 @@ const Section5a = () => {
 };
 
 export default Section5a;
-
-// import React from 'react';
-// import { Slide } from 'react-slideshow-image';
-// import 'react-slideshow-image/dist/styles.css'
-
-// const spanStyle = {
-//   padding: '20px',
-//   background: '#efefef',
-//   color: '#000000'
-// }
-
-// const divStyle = {
-//   display: 'flex',
-//   alignItems: 'center',
-//   justifyContent: 'center',
-//   backgroundSize: 'cover',
-//   height: '400px'
-// }
-// const slideImages = [
-//   {
-//     url: 'https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-//     caption: 'Slide 1'
-//   },
-//   {
-//     url: 'https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80',
-//     caption: 'Slide 2'
-//   },
-//   {
-//     url: 'https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-//     caption: 'Slide 3'
-//   },
-// ];
-
-// const Slideshow = () => {
-//     return (
-//       <div className="slide-container">
-//         <Slide>
-//          {slideImages.map((slideImage, index)=> (
-//             <div key={index}>
-//               <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
-//                 <span style={spanStyle}>{slideImage.caption}</span>
-//               </div>
-//             </div>
-//           ))} 
-//         </Slide>
-//       </div>
-//     )
-// }

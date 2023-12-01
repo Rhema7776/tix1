@@ -28,11 +28,11 @@ const Footer = () => {
             </Typography>
           </div>
 
-            <div className="hidden md:flex lg:gap-40  text-gray-900 ">
+            <div className="hidden md2:flex lg:gap-40 md2:gap-20  text-gray-900 ">
                 
                 <div className="justify-between  ">
                 <div
-                    className="xs:max-md:flex xs:max-md:justify-between cursor-pointer "
+                    className="xs:max-md2:flex xs:max-md:justify-between cursor-pointer "
                     
                 >
                     <Typography
@@ -232,11 +232,11 @@ const Footer = () => {
             </div>
 
             {/* Mobile Outlay */}
-          <div className="md:hidden  text-gray-900 ">
+          <div className="md2:hidden  text-gray-900 ">
            
             <div className="justify-between  ">
               <div
-                className="xs:max-md:flex xs:max-md:justify-between cursor-pointer "
+                className="xs:max-md2:flex xs:max-md2:justify-between cursor-pointer "
                 onClick={handleClickproducts}
               >
                 <Typography
@@ -245,7 +245,7 @@ const Footer = () => {
                 >
                   Products
                 </Typography>
-                <div className="md:hidden">
+                <div className="md2:hidden">
                   <img
                     data-v-74575c9b=""
                     src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMC40MTA4IDAuOTEwOTA2QzEwLjczNjIgMC41ODU0NjkgMTEuMjYzOCAwLjU4NTQ2OSAxMS41ODkzIDAuOTEwOTA2QzExLjkxNDcgMS4yMzYzNCAxMS45MTQ3IDEuNzYzOTggMTEuNTg5MyAyLjA4OTQyTDYuNTg5MjcgNy4wODk0MkM2LjI3Mzc4IDcuNDA0OSA1Ljc2NTc5IDcuNDE1OTQgNS40MzY5MSA3LjExNDQ2TDAuNDM2OTA2IDIuNTMxMTNDMC4wOTc2NDAxIDIuMjIwMTMgMC4wNzQ3MjA0IDEuNjkyOTkgMC4zODU3MTQgMS4zNTM3M0MwLjY5NjcwOCAxLjAxNDQ2IDEuMjIzODUgMC45OTE1NDEgMS41NjMxMSAxLjMwMjUzTDUuOTc0OTUgNS4zNDY3MUwxMC40MTA4IDAuOTEwOTA2WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=="
@@ -298,11 +298,11 @@ const Footer = () => {
             </div>
 
             <div className="cursor-pointer" onClick={handleClickcompany}>
-              <div className="xs:max-md:flex xs:max-md:justify-between ">
+              <div className="xs:max-md2:flex xs:max-md2:justify-between  ">
                 <Typography className="font-bold text-md orangetext block mb-3 ">
                   Company
                 </Typography>
-                <div className="md:hidden ">
+                <div className="md2:hidden ">
                   <img
                     data-v-74575c9b=""
                     src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMC40MTA4IDAuOTEwOTA2QzEwLjczNjIgMC41ODU0NjkgMTEuMjYzOCAwLjU4NTQ2OSAxMS41ODkzIDAuOTEwOTA2QzExLjkxNDcgMS4yMzYzNCAxMS45MTQ3IDEuNzYzOTggMTEuNTg5MyAyLjA4OTQyTDYuNTg5MjcgNy4wODk0MkM2LjI3Mzc4IDcuNDA0OSA1Ljc2NTc5IDcuNDE1OTQgNS40MzY5MSA3LjExNDQ2TDAuNDM2OTA2IDIuNTMxMTNDMC4wOTc2NDAxIDIuMjIwMTMgMC4wNzQ3MjA0IDEuNjkyOTkgMC4zODU3MTQgMS4zNTM3M0MwLjY5NjcwOCAxLjAxNDQ2IDEuMjIzODUgMC45OTE1NDEgMS41NjMxMSAxLjMwMjUzTDUuOTc0OTUgNS4zNDY3MUwxMC40MTA4IDAuOTEwOTA2WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=="
@@ -356,11 +356,11 @@ const Footer = () => {
             </div>
 
             <div className="cursor-pointer" onClick={handleClicksocial}>
-              <div className="xs:max-md:flex xs:max-md:justify-between ">
+              <div className="xs:max-md2:flex xs:max-md2:justify-between ">
                 <Typography className="font-bold text-md orangetext block mb-3 ">
                   Follow Us
                 </Typography>
-                <div className="md:hidden ">
+                <div className="md2:hidden ">
                   <img
                     data-v-74575c9b=""
                     src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMC40MTA4IDAuOTEwOTA2QzEwLjczNjIgMC41ODU0NjkgMTEuMjYzOCAwLjU4NTQ2OSAxMS41ODkzIDAuOTEwOTA2QzExLjkxNDcgMS4yMzYzNCAxMS45MTQ3IDEuNzYzOTggMTEuNTg5MyAyLjA4OTQyTDYuNTg5MjcgNy4wODk0MkM2LjI3Mzc4IDcuNDA0OSA1Ljc2NTc5IDcuNDE1OTQgNS40MzY5MSA3LjExNDQ2TDAuNDM2OTA2IDIuNTMxMTNDMC4wOTc2NDAxIDIuMjIwMTMgMC4wNzQ3MjA0IDEuNjkyOTkgMC4zODU3MTQgMS4zNTM3M0MwLjY5NjcwOCAxLjAxNDQ2IDEuMjIzODUgMC45OTE1NDEgMS41NjMxMSAxLjMwMjUzTDUuOTc0OTUgNS4zNDY3MUwxMC40MTA4IDAuOTEwOTA2WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=="
@@ -373,7 +373,7 @@ const Footer = () => {
                 <div
                   className={
                     !socialmenu
-                      ? "hidden "
+                      ? "hidden"
                       : "w-full text-md text-center mx-auto z-10 scrollbox-inner "
                   }
                 >

@@ -16,7 +16,7 @@ const Selectscroll = () => {
       const scrollDirection = currentScrollY > prevScrollY ? 'down' : 'up';
   
       if (dropdownRef.current) {
-        const scrollAmount = scrollDirection === 'down' ? 50 : -50;
+        const scrollAmount = scrollDirection === 'down' ? 100 : -300;
         dropdownRef.current.scrollTop += scrollAmount;
       }
   
@@ -32,7 +32,7 @@ const Selectscroll = () => {
     }, [prevScrollY]);
     
     return (
-    <div className='app   mx-auto ' >
+    <div className='app   mx-auto md2:mt-48  ' >
         
         <div   className="mb-[10px] w-full   justify-center flex flex-row font-extrabold orangetext text-2xl sm:text-3xl md2:text-6xl ">
         
@@ -45,14 +45,14 @@ const Selectscroll = () => {
         </div>
         <div className=' h-full blurred-container fading-container w-full'>
         
-        <div ref={dropdownRef} className= "pt-96 lg:pt-[55%] scroll-container  xs:max-md:h-[450px] no-scroll md:h-[400px] lg:h-[800px]  align-start"
+        <div ref={dropdownRef} className= "pt-96 sm:pt-48 lg:pt-[55%] md2:h-full xs:max-md:text-2xl  sm:text-3xl md:text-6xl scroll-container  xs:max-md:h-[450px] no-scroll md:h-[400px]  lg:h-[800px]  align-start"
          >
            
           
             <div className="content-box ">
-                  <h1> 
-                      Influencer Hangout
-                  </h1>
+                <h1> 
+                  Influencer Hangout
+                </h1>
             </div>
            
             <div className="content-box ">
